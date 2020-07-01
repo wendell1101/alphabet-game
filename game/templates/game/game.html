@@ -1,0 +1,37 @@
+{% extends 'webapp/base.html'%}
+{% load static%}
+{%block content%}
+<div class="row p-5 game-bg">
+  <div class="col-md-6">
+      <label >Write Below </label>
+      <div class="convas-main text-white" >
+        <canvas id="input_canvas" class="bg-success border-warning text-white"style="pointer-events: none;color:white!important"></canvas>
+      </div>
+  </div>
+  <div class="col" style="align-self: center">
+      <div id="random_alphabet_block"></div>
+      <label id="minutes">00</label>:<label id="seconds">00</label> <br /><!-- timer block --->
+      <div id="loader"></div>
+      <div class="row">
+        <div class="col justify-content-center">
+          <button id="button_game_start" class="mb-2 button-enable">
+              Start It
+          </button>
+          <button id="button_recognize" onclick="StartRecognize()"  disabled="disable" class="mb-2 button-disable">
+              Check It
+          </button>
+          <button id="button_remove" disabled="disable" class="mb-2 button-disable">
+              Erase It
+          </button>
+          <button id="button_play_again" style="visibility: hidden;"class="mb-2">
+              Play Again
+          </button>
+        </div>
+      </div>
+      <label id="loading_label">Please wait...</label>
+  </div>
+
+</div>
+
+  </div>
+{%endblock content%}
